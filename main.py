@@ -477,12 +477,17 @@ def user_main(fn: str) -> None:
 
 
         except TypeError as err:
+            clear_screen()
             print(err)
         except ValueError as err:
+            clear_screen()
             print(err)
         except Exception as err:
+            clear_screen()
             print(err)
+            return
         except (KeyboardInterrupt, EOFError):
+            clear_screen()
             print("\nProgram was halted.")
             exit() 
 
